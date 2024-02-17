@@ -9,11 +9,11 @@ document.write(document.body.append(inp,button))
 button.addEventListener('click',()=> {
     const inptval = document.querySelector('input').value;
     let p = document.querySelector('p');
-    p.innerHTML = '';
     try {
         if(inptval == "") throw 'Please Fill the input';
         if(isNaN(inptval)) throw 'NOt a Number';
     } catch (error) {
         p.innerHTML = error;            
     }
+    p.style.color = 'red    '
 });
