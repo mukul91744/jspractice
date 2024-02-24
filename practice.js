@@ -1,12 +1,12 @@
-// Json 
-const emp = '{"name" : "anuj","Lastname" : "Yadav"}'
-let obj = JSON.parse(emp);
-console.log(obj.name+ obj.Lastname);
-const sel = document.createElement("select");
-const option3 = document.createElement("option");
-option3.innerHTML = obj.name;
-let option2 = document.createElement("option");
-option2.innerHTML = obj.Lastname;
-sel.appendChild(option3);
-sel.appendChild(option2);
-const bd = document.body.append(sel);
+const employe = [
+    {name:'mukul',comp:'ihb',inc:20000},
+    {name:'sourav',comp:'tec',inc:50000},
+    {name:'ajay',comp:'solv',inc:26000},
+    {name:'nikhil',comp:'planet',inc:22000},
+    {name:'vijay',comp:'Qrb',inc:24000},
+];
+
+let str = employe.filter((emp)=> {
+    return emp.inc > 24000
+})
+console.log(str)
